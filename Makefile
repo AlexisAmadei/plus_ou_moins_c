@@ -13,7 +13,7 @@ NAME    =	plus_or_minus
 
 CFLAGS	=	-Wall -Wextra -g3
 
-CPPFLAGS	=	-I ./include/
+CPPFLAGS	=	-I ./include/ -Llib/ -lmy lib/my/
 
 CC	=	gcc
 
@@ -25,6 +25,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	clear
 
 re:     fclean all
 
