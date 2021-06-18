@@ -8,6 +8,7 @@
 SRC		=	src/main.c			\
 			src/my_print.c 		\
 			src/plus_or_minus.c \
+			src/init.c 			\
 
 OBJ     =       $(SRC:.c=.o)
 

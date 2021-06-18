@@ -8,6 +8,8 @@
 #ifndef PROTO_H_
 #define PROTO_H_
 
+#include "struct.h"
+
 //lib fcts
 void my_putchar(char c);
 void my_putstr(char *str);
@@ -18,5 +20,8 @@ void help(void);
 
 //pom.c
 int plus_or_minus(char nb_player);
+
+//init.c
+pom_t *init_pom(void);
 
 #endif /* !PROTO_H_ */

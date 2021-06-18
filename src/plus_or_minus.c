@@ -7,16 +7,6 @@
 
 #include "pom.h"
 
-pom_t *init_pom(void)
-{
-    pom_t *game = malloc(sizeof(pom_t));
-
-    game->user1 = NULL;
-    game->user2 = NULL;
-    game->choosen_nb = 0;
-    return game;
-}
-
 static void check_arg(const char nb_player)
 {
     if (nb_player < '0' || nb_player > '2') {
@@ -25,17 +15,38 @@ static void check_arg(const char nb_player)
     }
 }
 
-int plus_or_minus(char nb_player)
+static void get_player(pom_t *game, int num_player)
 {
-    pom_t *game = init_pom();
-    size_t size;
     char *buffer = NULL;
+    size_t size;
 
-    check_arg(nb_player);
     my_putstr("Hey buddy what's your name ? ");
     getline(&buffer, &size, stdin);
     game->user1 = malloc(sizeof(char) * strlen(buffer));
     game->user1 = buffer;
-    printf("%s", game->user1);
+    buffer = NULL;
+    if (num_player == 2) {
+        my_putstr("Hey buddy v2 what's your name ? ");
+        getline(&buffer, &size, stdin);
+        game->user2 = malloc(sizeof(char) * strlen(buffer));
+        game->user2 = buffer;
+        buffer = NULL;
+    }
+}
+
+void set_rand(pom_t *game)
+{
+    int nb = 0;
+    srand()
+}
+
+int plus_or_minus(char nb_player)
+{
+    pom_t *game = init_pom();
+    int num_player = nb_player - '0';
+
+    check_arg(nb_player);
+    get_player(game, num_player);
+    get_number(game);
     return 0;
 }
