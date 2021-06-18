@@ -9,6 +9,9 @@
 #define POM_H_
 
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "proto.h"
 #include "struct.h"

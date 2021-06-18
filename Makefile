@@ -5,7 +5,9 @@
 ## Makefile
 ##
 
-SRC		=	src/main.c		\
+SRC		=	src/main.c			\
+			src/my_print.c 		\
+			src/plus_or_minus.c \
 
 OBJ     =       $(SRC:.c=.o)
 
@@ -13,7 +15,7 @@ NAME    =	plus_or_minus
 
 CFLAGS	=	-Wall -Wextra -g3
 
-CPPFLAGS	=	-I ./include/ -Llib/ -lmy lib/my/
+CPPFLAGS	=	-I ./include/
 
 CC	=	gcc
 
