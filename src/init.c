@@ -7,13 +7,33 @@
 
 #include "pom.h"
 
-pom_t *init_pom(void)
+oneplayer_t *init_one(void)
 {
-    pom_t *game = malloc(sizeof(pom_t));
+    oneplayer_t *one = malloc(sizeof(oneplayer_t));
 
-    game->user1 = NULL;
-    game->user2 = NULL;
-    game->choosen_nb = 0;
-    game->rand_nb = 0;
-    return game;
+    one->user1 = NULL;
+    one->user2 = NULL;
+    one->choosen_nb = 0;
+    one->rand_nb = 0;
+    return one;
+}
+
+twoplayer_t *init_two(void)
+{
+    twoplayer_t *two = malloc(sizeof(twoplayer_t));
+
+    two->user1 = NULL;
+    two->user2 = NULL;
+    return two;
+}
+
+void game(const char **argv)
+{
+    oneplayer_t *one = init_one();
+    twoplayer_t *two = init_two();
+
+    if (check_arg(argv[1][0]) == 1)
+        one_player(one);
+    if (check_arg(argv[1][0]) == 2)
+        two_player(two)
 }

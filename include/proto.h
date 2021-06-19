@@ -17,14 +17,22 @@ int my_put_nbr(int nb);
 
 //main.c
 void help(void);
+void check_arg(const char nb_player);
+
 
 //pom.c
-int plus_or_minus(char nb_player);
+int one_player(oneplayer_t *game);
+int two_player(twoplayer_t *game);
 
 //init.c
-pom_t *init_pom(void);
+oneplayer_t *init_pom(void);
+void game(const char **argv);
+
 
 //putnbr
 int my_put_nbr(int nb);
+
+//get_player.c
+void get_player(oneplayer_t *game, int num_player);
 
 #endif /* !PROTO_H_ */

@@ -13,11 +13,22 @@ void help(void)
     my_putstr("Remember to buy some milk.\n\n");
 }
 
+void check_arg(const char nb_player)
+{
+    if (nb_player < '0' || nb_player > '2') {
+        help();
+        exit(84);
+    }
+    if (nb_player == 1)
+        return 1;
+    if (nb_player == 2)
+        return 2;
+}
+
 int main(int argc, char **argv)
 {
     if (argc == 1 || argc > 2)
         help();
-    if (argc == 2)
-        plus_or_minus(argv[1][0]);
+    game(argv[1][0]);
     return 0;
 }
