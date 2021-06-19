@@ -13,6 +13,7 @@ typedef struct pom_s
     char *user1;
     char *user2;
     int choosen_nb;
+    int rand_nb;
 }pom_t;
 
 #endif /* !STRUCT_H_ */

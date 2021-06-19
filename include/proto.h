@@ -24,4 +24,7 @@ int plus_or_minus(char nb_player);
 //init.c
 pom_t *init_pom(void);
 
+//putnbr
+int my_put_nbr(int nb);
+
 #endif /* !PROTO_H_ */

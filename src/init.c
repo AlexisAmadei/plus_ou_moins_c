@@ -14,5 +14,6 @@ pom_t *init_pom(void)
     game->user1 = NULL;
     game->user2 = NULL;
     game->choosen_nb = 0;
+    game->rand_nb = 0;
     return game;
 }
