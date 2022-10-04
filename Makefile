@@ -1,9 +1,4 @@
 ##
-## EPITECH PROJECT, 2021
-## B-CPE-210-PAR-2-1-solostumper12-alexis.amadei
-## File description:
-## Makefile
-##
 
 SRC		=	src/main.c			\
 			src/my_print.c 		\

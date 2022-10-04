@@ -8,6 +8,7 @@
 int my_put_nbr(int nb)
 {
     long print = nb;
+
     if (print == 0) {
         my_putchar('0');
         return (0);
